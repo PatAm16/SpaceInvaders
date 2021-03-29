@@ -39,6 +39,40 @@ public class SpawnInvaders : MonoBehaviour
 
         }
 
+        for (int i = 1; 1 <= nInvasores; i++)
+        {
 
+            GameObject newInvader = Instantiate(invasorA, transform);
+            newInvader.transform.position = new Vector3(xMin, 0f, 0f);
+            xMin *= 1f;
+
+        }
+
+        for (int i = 1; 1 <= nInvasores; i++)
+        {
+
+            GameObject newInvader = Instantiate(invasorB, transform);
+            newInvader.transform.position = new Vector3(xMin, -0.5f, 0f);
+            xMin *= 1f;
+
+        }
+
+        for (int i = 1; 1 <= nInvasores; i++)
+        {
+
+            GameObject newInvader = Instantiate(invasorB, transform);
+            newInvader.transform.position = new Vector3(xMin, 0f, 0f);
+            xMin *= 1f;
+
+        }
+
+        for (int i = 1; 1 <= nInvasores; i++)
+        {
+
+            GameObject newInvader = Instantiate(invasorC, transform);
+            newInvader.transform.position = new Vector3(xMin, 0f, 0f);
+            xMin *= 1f;
+
+        }
     }
 }
