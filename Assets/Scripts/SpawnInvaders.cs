@@ -52,7 +52,7 @@ public class SpawnInvaders : MonoBehaviour
         {
 
             GameObject newInvader = Instantiate(invasorB, transform);
-            newInvader.transform.position = new Vector3(xMin, -0.5f, 0f);
+            newInvader.transform.position = new Vector3(xMin, 0.5f, 0f);
             xMin *= 1f;
 
         }
@@ -61,7 +61,7 @@ public class SpawnInvaders : MonoBehaviour
         {
 
             GameObject newInvader = Instantiate(invasorB, transform);
-            newInvader.transform.position = new Vector3(xMin, 0f, 0f);
+            newInvader.transform.position = new Vector3(xMin, 1f, 0f);
             xMin *= 1f;
 
         }
@@ -70,7 +70,7 @@ public class SpawnInvaders : MonoBehaviour
         {
 
             GameObject newInvader = Instantiate(invasorC, transform);
-            newInvader.transform.position = new Vector3(xMin, 0f, 0f);
+            newInvader.transform.position = new Vector3(xMin, 1.5f, 0f);
             xMin *= 1f;
 
         }
