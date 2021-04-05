@@ -3,7 +3,13 @@ guid: 85dd9df70022b46249c83f068702092d
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - invasorA: {fileID: 5114692261502259460, guid: a326bc86bfcad4f3fa9107df1ec95dec,
+      type: 3}
+  - invasorB: {fileID: 4991420466183522298, guid: e4784498688454403a2b54ace01fb5a5,
+      type: 3}
+  - invasorC: {fileID: 7102498303492620783, guid: 22d5b8e3f826e48d98cf2ed12352422a,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
