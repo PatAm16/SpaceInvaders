@@ -359,6 +359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fire: {fileID: 7870568420458952216, guid: d390e91db4cfa4ea78deffee12378a7e, type: 3}
+  velocidade: 5
 --- !u!1 &1874491643
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,10 +7,19 @@ public class Ship : MonoBehaviour
     [SerializeField]
     GameObject fire;
 
+    [SerializeField]
+    float velocidade = 5f;
+
+    Vector3 bottomLeftWorld, topRightWorld;
+
     // Start is called before the first frame update
     void Start()
     {
-      
+        bottomLeftWorld = Camera.main.ViewportToWorldPoint(Vector2.zero);
+        topRightWorld = Camera.main.ViewportToWorldPoint(Vector2.one);
+
+        Debug.Log(bottomLeftWorld);
+        Debug.Log(topRightWorld);
     }
 
     // Update is called once per frame
@@ -26,6 +35,10 @@ public class Ship : MonoBehaviour
             Instantiate(fire, transform);
         }
 
-        float HMov = Input.GetAxis("Horizontal");
+        float hMov = Input.GetAxis("Horizontal");
+        transform.position += hMov * velocidade * Vector3.right * Time.deltaTime;
+
+        Vector3 position = transform.position;
+
     }
 }
