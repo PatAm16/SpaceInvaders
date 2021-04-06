@@ -17,8 +17,6 @@ public class Invader : MonoBehaviour
 
     float disparosAtingidos = 0f;
 
-
-
     void Update()
     {
         if (tag == "Destrutivel")

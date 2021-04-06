@@ -14,8 +14,10 @@ public class Ship : MonoBehaviour
     [SerializeField]
     float velocidade = 5f;
 
+    [SerializeField]
     float nrVezesAtingida = 0f;
 
+    [SerializeField]
     float nrVidas = 3f;
 
     float minX, maxX;
