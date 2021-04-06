@@ -17,11 +17,17 @@ public class Invader : MonoBehaviour
 
     float disparosAtingidos = 0f;
 
+    [SerializeField]
+    float minTempo = 2f;
+
+    [SerializeField]
+    float maxTempo = 3f;
+
     void Update()
     {
         if (tag == "Destrutivel")
         {
-            cadencia = Random.Range(2f, 3f);
+            cadencia = Random.Range(minTempo, maxTempo);
             tempoQuePassou += Time.deltaTime;
             if (tempoQuePassou >= cadencia)
             {
