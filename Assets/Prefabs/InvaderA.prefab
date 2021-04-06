@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 1232469204353720717}
   - component: {fileID: 969204704451017729}
   - component: {fileID: 7252492407427077967}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: InvaderA
-  m_TagString: Untagged
+  m_TagString: Destrutivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,3 +141,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43082bbce05164c3f9167b0b980cc9cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fire: {fileID: 7870568420458952216, guid: d390e91db4cfa4ea78deffee12378a7e, type: 3}
+  cadencia: 1.5

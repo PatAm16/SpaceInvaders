@@ -6,16 +6,10 @@ public class SpawnInvaders : MonoBehaviour
 {
 
     [SerializeField]
-    GameObject invasorA;
-
-    [SerializeField]
-    GameObject invasorB;
-
-    [SerializeField]
-    GameObject invasorC;
-
-    [SerializeField]
     GameObject[] invasores;
+
+    [SerializeField]
+    GameObject[] invasoresIndestrutiveis;
 
     [SerializeField]
     int nInvasores = 7;
@@ -32,6 +26,9 @@ public class SpawnInvaders : MonoBehaviour
     [SerializeField]
     float yInc = 0.5f;
 
+    [SerializeField]
+    float probabilidadeDeIndestrutivel = 0.15f;
+
 
     void Awake()
     {
@@ -46,6 +43,14 @@ public class SpawnInvaders : MonoBehaviour
             float x = xMin;
             for (int i = 1; i <= nInvasores; i++)
             {
+                GameObject normalOuIndestrutivel;
+                if (Random.value <= probabilidadeDeIndestrutivel)
+                {
+                    normalOuIndestrutivel = invasoresIndestrutiveis[line];
+                } else
+                {
+                    normalOuIndestrutivel = invasores[line];
+                }
                 GameObject newInvader = Instantiate(invasores[line], transform);
                 newInvader.transform.position = new Vector3(x, y, 0f);
                 x += xInc;
