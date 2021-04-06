@@ -14,6 +14,10 @@ public class Ship : MonoBehaviour
     [SerializeField]
     float velocidade = 5f;
 
+    float nrVezesAtingida = 0f;
+
+    float nrVidas = 3f;
+
     float minX, maxX;
 
     // Start is called before the first frame update
@@ -53,10 +57,15 @@ public class Ship : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "ProjectilAmigo")
+        if (collision.gameObject.tag == "DisparoDoInvasor")
         {
-            Destroy(gameObject);
+            nrVezesAtingida += 1;
             Destroy(collision.gameObject);
+
+            if(nrVezesAtingida >= nrVidas)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 

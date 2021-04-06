@@ -8,15 +8,22 @@ public class Invader : MonoBehaviour
     [SerializeField]
     GameObject fire = null;
 
-    [SerializeField]
-    float cadencia = 1.5f;
+
+    float cadencia;
 
     float tempoQuePassou = 0f;
+
+    float disparosNecessarios = 10;
+
+    float disparosAtingidos = 0f;
+
+
 
     void Update()
     {
         if (tag == "Destrutivel")
         {
+            cadencia = Random.Range(2f, 3f);
             tempoQuePassou += Time.deltaTime;
             if (tempoQuePassou >= cadencia)
             {
@@ -32,15 +39,27 @@ public class Invader : MonoBehaviour
     {
 
         if (tag == "Destrutivel")
+        {
+                if (collision.gameObject.tag == "DisparoDaNave")
+                {
+                    Destroy(gameObject); //Destruir-me
+                    Destroy(collision.gameObject); //Destruir o objeto que colidir comigo
+                }
+        }
+
+        if (tag == "Indestrutivel")
+        {
+            if (collision.gameObject.tag == "DisparoDaNave")
             {
-                if (collision.gameObject.tag == "ProjectilAmigo")
+                disparosAtingidos += 1f;
+                Destroy(collision.gameObject);
+
+                if(disparosAtingidos >= disparosNecessarios)
                 {
                     Destroy(gameObject);
-                    Destroy(collision.gameObject);
-                } else
-            {
-                Destroy(collision.gameObject);
+                }
             }
         }
+
     }
 }
